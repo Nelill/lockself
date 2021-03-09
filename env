@@ -1,0 +1,84 @@
+###> symfony/framework-bundle ###
+APP_ENV=prod
+APP_DEBUG=0
+APP_SECRET=62ab7ba420f13ef7f912d270c2a40ee0
+###< symfony/framework-bundle ###
+
+###> lexik/jwt-authentication-bundle ###
+JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/private.pem
+JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/public.pem
+JWT_PASSPHRASE="toto"
+JWT_TTL=604800
+###< lexik/jwt-authentication-bundle ###
+
+###> doctrine/doctrine-bundle ###
+DATABASE_URL='mysql://root:Bzad145ddzadC@lockself_mariadb_1:3306/lockself'
+###< doctrine/doctrine-bundle ###
+
+###> robmorgan/phinx ###
+PHINX_USER='lockself_migration'
+PHINX_PASSWORD='123456'
+PHINX_HOST='lockself_mariadb_1'
+PHINX_PORT='3306'
+PHINX_DB_NAME='lockself'
+###< robmorgan/phinx ###
+
+###> LockSelf ###
+debug=0
+domain=lockself.localhost
+saltPassword1="2R/?ip-78<GU]RtZ"
+saltPassword2="f%U)qSYQ6Xzf>Mh<"
+saltPin1="=g;%11pimnwvEOPY"
+saltPin2="ewRy&^Naq4F%mh&Q"
+keyPin="]sj,44|nv5_#[gjuZ9MXus)AIT?ssBPL"
+ivPin="JjjT<5V<lA[U-Xxm"
+saltApiHash1="9.o6s4f9}X,kR,1!"
+saltApiHash2="_2mCL>(|t>hd-DYw"
+sampleHash="ndJfdUc-FhgIv}I,"
+blockConnexionInSecond=900
+pinLength=6
+saltTransfer1="uS3<qdZiaNRaBo3d"
+saltTransfer2="yaW)%1+]!CF>w)Tl"
+saltTransferProtectedEmail1="8@R;,mfSK!VagUS2"
+saltTransferProtectedEmail2="~Gp3YOo3TbJo4T.n"
+saltDeposit1="20-J=glPo!m(Q!Pt"
+saltDeposit2=")rl&q+sO>:yxk9gY"
+saltMail1="z>grVRtsIMLs/V?Z"
+saltMail2="_:WvA^j~d/weR;lU"
+bucket=
+providerAccessKey=
+providerSecretKey=
+providerRegion=
+providerEndpoint=
+provider=LOCAL
+depositTokenTime=15
+noReplyEmail='no-reply@localhost.com'
+colorBtn='#39499b'
+companyName="LockSelf"
+nameDepositBox="Access to a deposit box"
+newFileDeposit="New file uploaded"
+newTransfer="New protected file received"
+apiVersion=3
+intercoAd=0
+intercoAdPrefix=''
+importOrganization=0
+importOrganizationSendEmail=0
+intercoAdOrganizations=0
+###< LockSelf ###
+
+###> symfony/swiftmailer-bundle ###
+MAILER_URL=smtp://toto:25?encryption=&username=&password=
+###< symfony/swiftmailer-bundle ###
+
+###> ovh/ovh ###
+smsApplicationKey=
+smsApplicationSecret=
+smsConsumerKey=
+smsEndpoint=
+###< ovh/ovh ###
+
+###> knplabs/knp-snappy-bundle ###
+WKHTMLTOPDF_PATH=/usr/local/bin/wkhtmltopdf
+WKHTMLTOIMAGE_PATH=/usr/local/bin/wkhtmltoimage
+###< knplabs/knp-snappy-bundle ###
+

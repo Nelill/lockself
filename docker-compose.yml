@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:10.5.4
+    restart: always
+    volumes:
+      - "./mysql:/var/lib/mysql"
+    ports :
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ByXj4sK7tfwD
+      MYSQL_DATABASE: lockself
+
+  lockself-api-3:
+    image: lockself-api-v3:1.0.18
+    restart: always
+    volumes:
+      - "./jwt:/usr/local/var/www/html/config/jwt"
+      - "./certificate:/usr/local/etc/nginx/ssl"
+      - "./env:/usr/local/var/www/html/.env"
+      - "./files:/usr/local/var/www/html/var/glutton"
+      # - "./certificate/sp.crt:/usr/local/var/www/html/vendor/onelogin/php-saml/certs/sp.crt"
+      # - "./certificate/ssl-certificate.key:/usr/local/var/www/html/vendor/onelogin/php-saml/certs/sp.key"
+    ports :
+      - "80:8080"
+      - "443:4443"
